@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
        const params = new URLSearchParams(window.location.search);
          return params.get(param);
     }
-
+  
     var city = getQuery('city');
+    console.log(city);
     if(city){
         document.getElementById('city-name').textContent = city;
         fetchRestaurants(city);
@@ -34,6 +35,7 @@ function fetchRestaurants(cityName) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
         // parses response to json if successful
+        // not the actual data we need yet
         console.log(response, 'response');
         return response.json();
     })
