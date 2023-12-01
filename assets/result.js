@@ -23,7 +23,7 @@ function fetchRestaurants(cityName) {
     var proxyUrl = 'https://afternoon-badlands-11870.herokuapp.com/'; // Use a proxy to avoid CORS errors
     var apiKey ='NKox_GY98ntD7Hu5CCjMS8VQevvrNWZf69qUTAZhXNKLAgrVQPM9M7se2ktuWnZMrU0OPOUdUc1X2Gjp6kzEVPW632s2UUHTr0sRi8h3aVxZ9F752QYGW5blZxpXZXYx';
 
-    fetch(proxyUrl+url+`?location=${encodeURIComponent(cityName)}`, {
+    fetch(proxyUrl+url+`?location=${cityName}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${apiKey}`,

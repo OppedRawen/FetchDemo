@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         var city = input.value.trim();
         if(city){
-            window.location.href = 'resultPage.html?city='+encodeURIComponent(city);
+            window.location.href = 'resultPage.html?city='+city;
+            
         }else{
-            alerty('something went wrong');
+            alert('something went wrong');
         }
 })
 });
